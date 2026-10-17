@@ -1,0 +1,4 @@
+/* 启动清理期间隐藏工作区，避免上次的标签页闪现 */
+body.clean-startup-hiding .workspace {
+	visibility: hidden !important;
+}

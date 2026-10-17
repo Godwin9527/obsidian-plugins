@@ -1,0 +1,10 @@
+{
+	"id": "clean-startup",
+	"name": "Clean Startup",
+	"version": "1.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "每次启动 Obsidian 时关闭所有标签页、折叠文件夹树与右侧栏，保持干净的开局界面。",
+	"author": "Godwin9527",
+	"authorUrl": "https://github.com/Godwin9527",
+	"isDesktopOnly": false
+}
