@@ -16,7 +16,22 @@ Obsidian 默认会记住退出时的布局：开了七八个标签页直接关�
 
 ## 安装
 
-### 手动安装
+### 方式一：BRAT（可自动更新）
+
+1. 安装并启用 BRAT 插件
+2. 命令面板运行 `BRAT: Add a beta plugin for testing`
+3. 输入仓库地址：
+
+   ```
+   Godwin9527/obsidian-plugins
+   ```
+
+   > 只能填仓库根路径。BRAT 的地址校验正则只接受 `user/repo` 或 `https://github.com/user/repo`，**不支持 `tree/main/子目录` 形式的链接**。
+4. BRAT 会从 [Releases](https://github.com/Godwin9527/obsidian-plugins/releases) 下载 `main.js`、`manifest.json`、`styles.css` 到 `.obsidian/plugins/clean-startup/`
+
+> BRAT 只读 Release 附件，不读仓库源码。若报「没有找到发布的版本」，说明该仓库没有 Release，需要先发版。
+
+### 方式二：手动安装
 
 1. 下载本文件夹（`clean-startup`）
 2. 复制到你的库目录下：
@@ -73,6 +88,14 @@ npm run build   # 类型检查 + 生产构建
 ```
 
 源码在 `src/main.ts`，`main.js` 是 esbuild 产物，不要直接改。
+
+### 发布新版本（BRAT 用户靠这个更新）
+
+1. `npm run build` 重新打包
+2. 修改 `manifest.json` 的 `version`
+3. 在仓库根目录运行 `./release.sh`
+
+脚本会读取版本号、提交、打 tag、创建 Release 并上传三个文件。BRAT 只认 Release 附件，**光推 commit 不会让用户收到更新**。
 
 ## License
 
