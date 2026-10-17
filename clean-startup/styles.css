@@ -1,4 +1,4 @@
-/* 启动清理期间隐藏工作区，避免上次的标签页闪现 */
-body.clean-startup-hiding .workspace {
-	visibility: hidden !important;
-}
+/*
+ * Clean Startup
+ * 1.2.0 起已移除启动遮罩，本文件保留为空以便 BRAT 正常安装。
+ */
